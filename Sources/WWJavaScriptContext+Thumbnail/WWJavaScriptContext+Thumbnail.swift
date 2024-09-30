@@ -72,10 +72,9 @@ private extension WWJavaScriptContext.Thumbnail {
     /// 將HTML中的縮圖URL解出來
     /// - Parameter html: HTML文字
     /// - Returns: JSValue?
-    func parseHTML(_ html: String?) -> JSValue? {
+    func parseHTML(_ html: String) -> JSValue? {
         
-        guard let html = html,
-              let context = context,
+        guard let context = context,
               let script = readScript(with: "jsSource.js")
         else {
             return nil
@@ -93,8 +92,8 @@ private extension WWJavaScriptContext.Thumbnail {
     /// - Parameters:
     ///   - urlString: URL網址
     ///   - encoding: 文字編碼
-    ///   - result: (Result<String?, Error>) -> Void
-    func parseURL(_ urlString: String, using encoding: String.Encoding, result: @escaping (Result<String?, Error>) -> Void) {
+    ///   - result: (Result<String, Error>) -> Void
+    func parseURL(_ urlString: String, using encoding: String.Encoding, result: @escaping (Result<String, Error>) -> Void) {
         
         _ = WWNetworking.shared.request(urlString: urlString) { _result in
             
@@ -105,7 +104,7 @@ private extension WWJavaScriptContext.Thumbnail {
                 guard let data = info.data,
                       let html = data._string(using: encoding)
                 else {
-                    return
+                    result(.failure(Constant.MyError.notString)); return
                 }
                 
                 result(.success(html))

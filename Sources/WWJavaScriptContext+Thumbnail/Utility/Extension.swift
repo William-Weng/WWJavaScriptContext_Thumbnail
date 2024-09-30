@@ -2,7 +2,7 @@
 //  Extension.swift
 //  WWJavaScriptContext+Thumbnail
 //
-//  Created by iOS on 2024/9/30.
+//  Created by William.Weng on 2024/9/30.
 //
 
 import UIKit
