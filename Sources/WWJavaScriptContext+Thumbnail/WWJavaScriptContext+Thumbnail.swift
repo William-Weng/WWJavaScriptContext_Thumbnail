@@ -29,18 +29,70 @@ extension WWJavaScriptContext {
 // MARK: - 公開函數
 public extension WWJavaScriptContext.Thumbnail {
     
-    /// 解析該網頁的縮圖網址
+    /// 取得該網頁的縮圖網址
     /// - Parameters:
     ///   - urlString: 網址
     ///   - encoding: 文字編碼
     ///   - result: (Result<JSValue?, Error>) -> Void
-    func parse(url urlString: String, using encoding: String.Encoding = .utf8, result: @escaping (Result<JSValue?, Error>) -> Void) {
+    func thumbnailURL(urlString: String, using encoding: String.Encoding = .utf8, result: @escaping (Result<JSValue?, Error>) -> Void) {
         
         parseURL(urlString, using: encoding) { _result in
             
             switch _result {
             case .failure(let error): result(.failure(error))
             case .success(let html): result(.success(self.parseHTML(html)))
+            }
+        }
+    }
+    
+    /// 取得該網頁的縮圖資料
+    /// - Parameters:
+    ///   - urlString: 網址
+    ///   - encoding: 文字編碼
+    ///   - characterSet: URL編碼處理 => .urlQueryAllowed
+    ///   - result: (Result<Data?, Error>) -> Void
+    func thumbnailData(urlString: String, using encoding: String.Encoding = .utf8, characterSet: CharacterSet? = nil, result: @escaping (Result<Data?, Error>) -> Void) {
+        
+        thumbnailURL(urlString: urlString, using: encoding) { _result in
+            
+            switch _result {
+            case .failure(let error): result(.failure(error))
+            case .success(let jsValue):
+                
+                var thumbnailUrlString = jsValue?.toString()
+                
+                if let characterSet = characterSet {
+                    thumbnailUrlString = thumbnailUrlString?._encodingURL(characterSet: characterSet)
+                }
+                
+                guard var thumbnailUrlString = thumbnailUrlString else { result(.failure(Constant.MyError.encoding)); return }
+                
+                WWNetworking.shared.request(urlString: thumbnailUrlString) { _result_ in
+                    
+                    switch _result_ {
+                    case .failure(let error): result(.failure(error))
+                    case .success(let info): result(.success(info.data))
+                    }
+                }
+            }
+        }
+    }
+    
+    /// 取得該網頁的縮圖
+    /// - Parameters:
+    ///   - urlString: 網址
+    ///   - encoding: 文字編碼
+    ///   - characterSet: URL編碼處理 => .urlQueryAllowed
+    ///   - result: (Result<Data?, Error>) -> Void
+    func thumbnail(urlString: String, using encoding: String.Encoding = .utf8, characterSet: CharacterSet? = nil, result: @escaping (Result<UIImage?, Error>) -> Void) {
+        
+        thumbnailData(urlString: urlString, using: encoding, characterSet: characterSet) { _result in
+            
+            switch _result {
+            case .failure(let error): result(.failure(error))
+            case .success(let data):
+                guard let data = data else { result(.failure(Constant.MyError.noData)); return }
+                result(.success(UIImage(data: data)))
             }
         }
     }
