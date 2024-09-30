@@ -19,7 +19,7 @@ final class ViewController: UIViewController {
         
         let urlString = "https://www.explainthis.io/zh-hant/swe/script-link-in-html"
         
-        WWJavaScriptContext.Thumbnail.shared.parse(url: urlString) { result in
+        WWJavaScriptContext.Thumbnail.shared.thumbnailURL(urlString: urlString) { result in
             
             switch result {
             case .failure(let error): wwPrint(error)
