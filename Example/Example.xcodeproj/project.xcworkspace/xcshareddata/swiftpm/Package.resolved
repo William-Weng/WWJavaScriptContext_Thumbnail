@@ -14,8 +14,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/William-Weng/WWJavaScriptContext_Thumbnail",
       "state" : {
-        "revision" : "3a00d707931e3c6f6bce93dc21fdc7bdef7c88dc",
-        "version" : "1.1.0"
+        "revision" : "89532c8acc5585d919edc875e3fec25c59058827",
+        "version" : "1.1.1"
       }
     },
     {
