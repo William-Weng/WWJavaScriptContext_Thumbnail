@@ -1,0 +1,41 @@
+{
+  "pins" : [
+    {
+      "identity" : "wwjavascriptcontext",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/William-Weng/WWJavaScriptContext",
+      "state" : {
+        "revision" : "605cb0a6f03fd007661ecd2586328a23c6665ab1",
+        "version" : "1.0.4"
+      }
+    },
+    {
+      "identity" : "wwjavascriptcontext_thumbnail",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/William-Weng/WWJavaScriptContext_Thumbnail",
+      "state" : {
+        "revision" : "0e73d2388f5d5c47214933bce5a85c054d6dbd6c",
+        "version" : "1.0.0"
+      }
+    },
+    {
+      "identity" : "wwnetworking",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/William-Weng/WWNetworking",
+      "state" : {
+        "revision" : "cad6323f8ec5b7fe87ac4c0e820c0529d402e5e1",
+        "version" : "1.6.2"
+      }
+    },
+    {
+      "identity" : "wwprint",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/William-Weng/WWPrint",
+      "state" : {
+        "revision" : "8f5928f5d36624d77f8fc563fd8e31a59cfac6b6",
+        "version" : "1.3.1"
+      }
+    }
+  ],
+  "version" : 2
+}
