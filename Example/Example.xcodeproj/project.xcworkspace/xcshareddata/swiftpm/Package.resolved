@@ -1,4 +1,5 @@
 {
+  "originHash" : "2abfbb40635d5ecc5fd4c06a64bfea79c5cf61a7b3db4e691a5b4268dce04997",
   "pins" : [
     {
       "identity" : "wwjavascriptcontext",
@@ -37,5 +38,5 @@
       }
     }
   ],
-  "version" : 2
+  "version" : 3
 }
