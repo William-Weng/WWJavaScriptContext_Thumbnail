@@ -7,8 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3DD6F8BF2D86C0D600DA7CD9 /* WWJavaScriptContext+Thumbnail in Frameworks */ = {isa = PBXBuildFile; productRef = 3DD6F8BE2D86C0D600DA7CD9 /* WWJavaScriptContext+Thumbnail */; };
 		640BDB332CB5D4AD002FF8B7 /* WWPrint in Frameworks */ = {isa = PBXBuildFile; productRef = 640BDB322CB5D4AD002FF8B7 /* WWPrint */; };
-		811521E12CAA8E4700CCB636 /* WWJavaScriptContext+Thumbnail in Frameworks */ = {isa = PBXBuildFile; productRef = 811521E02CAA8E4700CCB636 /* WWJavaScriptContext+Thumbnail */; };
 		817567FC2CA2C2B400B24577 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 817567FB2CA2C2B400B24577 /* AppDelegate.swift */; };
 		817568002CA2C2B400B24577 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 817567FF2CA2C2B400B24577 /* ViewController.swift */; };
 		817568032CA2C2B400B24577 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 817568012CA2C2B400B24577 /* Main.storyboard */; };
@@ -16,8 +16,6 @@
 		817568082CA2C2B500B24577 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 817568062CA2C2B500B24577 /* LaunchScreen.storyboard */; };
 		817568142CA2C33600B24577 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 817568122CA2C33600B24577 /* Constant.swift */; };
 		817568152CA2C33600B24577 /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 817568132CA2C33600B24577 /* Extension.swift */; };
-		819DB1D12CAA829D008BD771 /* WWJavaScriptContext+Thumbnail in Frameworks */ = {isa = PBXBuildFile; productRef = 819DB1D02CAA829D008BD771 /* WWJavaScriptContext+Thumbnail */; };
-		81E883282CAA80F00088EA18 /* WWJavaScriptContext+Thumbnail in Frameworks */ = {isa = PBXBuildFile; productRef = 81E883272CAA80F00088EA18 /* WWJavaScriptContext+Thumbnail */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,20 +35,26 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				81E883282CAA80F00088EA18 /* WWJavaScriptContext+Thumbnail in Frameworks */,
-				819DB1D12CAA829D008BD771 /* WWJavaScriptContext+Thumbnail in Frameworks */,
+				3DD6F8BF2D86C0D600DA7CD9 /* WWJavaScriptContext+Thumbnail in Frameworks */,
 				640BDB332CB5D4AD002FF8B7 /* WWPrint in Frameworks */,
-				811521E12CAA8E4700CCB636 /* WWJavaScriptContext+Thumbnail in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3DD6F8BA2D86BFC100DA7CD9 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		817567EF2CA2C2B400B24577 = {
 			isa = PBXGroup;
 			children = (
 				817567FA2CA2C2B400B24577 /* Example */,
+				3DD6F8BA2D86BFC100DA7CD9 /* Frameworks */,
 				817567F92CA2C2B400B24577 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -135,10 +139,8 @@
 			);
 			name = Example;
 			packageProductDependencies = (
-				81E883272CAA80F00088EA18 /* WWJavaScriptContext+Thumbnail */,
-				819DB1D02CAA829D008BD771 /* WWJavaScriptContext+Thumbnail */,
-				811521E02CAA8E4700CCB636 /* WWJavaScriptContext+Thumbnail */,
 				640BDB322CB5D4AD002FF8B7 /* WWPrint */,
+				3DD6F8BE2D86C0D600DA7CD9 /* WWJavaScriptContext+Thumbnail */,
 			);
 			productName = Example;
 			productReference = 817567F82CA2C2B400B24577 /* Example.app */;
@@ -169,8 +171,8 @@
 			);
 			mainGroup = 817567EF2CA2C2B400B24577;
 			packageReferences = (
-				811521DF2CAA8E4700CCB636 /* XCRemoteSwiftPackageReference "WWJavaScriptContext_Thumbnail" */,
 				640BDB312CB5D4AD002FF8B7 /* XCRemoteSwiftPackageReference "WWPrint" */,
+				3DD6F8BD2D86C0D600DA7CD9 /* XCRemoteSwiftPackageReference "WWJavaScriptContext_Thumbnail" */,
 			);
 			productRefGroup = 817567F92CA2C2B400B24577 /* Products */;
 			projectDirPath = "";
@@ -437,6 +439,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		3DD6F8BD2D86C0D600DA7CD9 /* XCRemoteSwiftPackageReference "WWJavaScriptContext_Thumbnail" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/William-Weng/WWJavaScriptContext_Thumbnail";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.2.0;
+			};
+		};
 		640BDB312CB5D4AD002FF8B7 /* XCRemoteSwiftPackageReference "WWPrint" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/William-Weng/WWPrint";
@@ -445,34 +455,18 @@
 				minimumVersion = 1.3.1;
 			};
 		};
-		811521DF2CAA8E4700CCB636 /* XCRemoteSwiftPackageReference "WWJavaScriptContext_Thumbnail" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/William-Weng/WWJavaScriptContext_Thumbnail";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 1.0.0;
-			};
-		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		3DD6F8BE2D86C0D600DA7CD9 /* WWJavaScriptContext+Thumbnail */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3DD6F8BD2D86C0D600DA7CD9 /* XCRemoteSwiftPackageReference "WWJavaScriptContext_Thumbnail" */;
+			productName = "WWJavaScriptContext+Thumbnail";
+		};
 		640BDB322CB5D4AD002FF8B7 /* WWPrint */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 640BDB312CB5D4AD002FF8B7 /* XCRemoteSwiftPackageReference "WWPrint" */;
 			productName = WWPrint;
-		};
-		811521E02CAA8E4700CCB636 /* WWJavaScriptContext+Thumbnail */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 811521DF2CAA8E4700CCB636 /* XCRemoteSwiftPackageReference "WWJavaScriptContext_Thumbnail" */;
-			productName = "WWJavaScriptContext+Thumbnail";
-		};
-		819DB1D02CAA829D008BD771 /* WWJavaScriptContext+Thumbnail */ = {
-			isa = XCSwiftPackageProductDependency;
-			productName = "WWJavaScriptContext+Thumbnail";
-		};
-		81E883272CAA80F00088EA18 /* WWJavaScriptContext+Thumbnail */ = {
-			isa = XCSwiftPackageProductDependency;
-			productName = "WWJavaScriptContext+Thumbnail";
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

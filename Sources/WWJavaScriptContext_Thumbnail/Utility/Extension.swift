@@ -1,6 +1,6 @@
 //
 //  Extension.swift
-//  WWJavaScriptContext+Thumbnail
+//  WWJavaScriptContext_Thumbnail
 //
 //  Created by William.Weng on 2024/9/30.
 //

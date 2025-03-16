@@ -1,22 +1,22 @@
-// swift-tools-version: 5.6
+// swift-tools-version: 5.7
 // The swift-tools-version declares the minimum version of Swift required to build this package.
 
 import PackageDescription
 
 let package = Package(
-    name: "WWJavaScriptContext+Thumbnail",
+    name: "WWJavaScriptContext_Thumbnail",
     platforms: [
-        .iOS(.v14),
+        .iOS(.v15),
     ],
     products: [
-        .library(name: "WWJavaScriptContext+Thumbnail", targets: ["WWJavaScriptContext+Thumbnail"]),
+        .library(name: "WWJavaScriptContext_Thumbnail", targets: ["WWJavaScriptContext_Thumbnail"]),
     ],
     dependencies: [
-        .package(url: "https://github.com/William-Weng/WWJavaScriptContext", from: "1.0.3"),
-        .package(url: "https://github.com/William-Weng/WWNetworking", from: "1.6.2")
+        .package(url: "https://github.com/William-Weng/WWJavaScriptContext", from: "1.1.0"),
+        .package(url: "https://github.com/William-Weng/WWNetworking", from: "1.7.5")
     ],
     targets: [
-        .target(name: "WWJavaScriptContext+Thumbnail", dependencies: ["WWJavaScriptContext", "WWNetworking"], resources: [.process("Script"), .copy("Privacy")]),
+        .target(name: "WWJavaScriptContext_Thumbnail", dependencies: ["WWJavaScriptContext", "WWNetworking"], resources: [.process("Script"), .copy("Privacy")]),
     ],
     swiftLanguageVersions: [
         .v5
